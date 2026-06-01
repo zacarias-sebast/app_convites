@@ -1,0 +1,322 @@
+# 🎨 Preview Visual - Tela de Detalhes
+
+## Estrutura da Página (Desktop)
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Nzayeto - Detalhes do Produto                │
+└─────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│                                                                  │
+│  ┌────────────────────────┐    ┌──────────────────────────────┐ │
+│  │                        │    │                              │ │
+│  │    IMAGEM PRINCIPAL    │    │  🔥 PREMIUM                  │ │
+│  │                        │    │  Branding Sob Medida         │ │
+│  │   (1200x1200px)        │    │                              │ │
+│  │                        │    │  ⭐ 5.0 ★★★★★               │ │
+│  │  ◄  Imagem    ▶       │    │                              │ │
+│  │                        │    │  R$ 2.450,00                 │
+│  │                        │    │  R$ 3.200,00 (23% desc)      │
+│  └────────────────────────┘    │                              │
+│  ┌─┐ ┌─┐ ┌─┐ ┌─┐              │  Transforme a identidade...  │
+│  └─┘ └─┘ └─┘ └─┘              │                              │
+│  Thumbnails (4 imagens)        │  Cor:                        │
+│                                │  ┌──────┐┌──────┐┌──────┐    │
+│                                │  │Digi..││Impr..││Dig+I.│    │
+│                                │  └──────┘└──────┘└──────┘    │
+│                                │                              │
+│                                │  Tamanho:                    │
+│                                │  ┌──────┐┌──────┐┌──────┐    │
+│                                │  │Padr..││Compl.││Extra │    │
+│                                │  └──────┘└──────┘└──────┘    │
+│                                │                              │
+│                                │  Disponível: 100 unidades    │
+│                                │                              │
+│                                │  Qtd: - 1 +                  │
+│                                │  ┌────────────────────────┐  │
+│                                │  │ 🛒 Adicionar ao Carrinho│  │
+│                                │  └────────────────────────┘  │
+│                                │                              │
+│                                │  ✅ Garantia de Satisfação   │
+│                                │     Nossa satisfação é...    │
+│                                │                              │
+│  └──────────────────────────────────────────────────────────┘ │
+│                                                                │
+│  ┌────────────┐ ┌──────────────┐ ┌────────────────────────┐   │
+│  │ 📅 Prazo   │ │ 🔄 Revisões  │ │ ⚠️  Regra de Negócio   │   │
+│  │ 15 dias    │ │ 3 Rodadas    │ │ Pagamento 50% antes... │   │
+│  └────────────┘ └──────────────┘ └────────────────────────┘   │
+│                                                                │
+│  📋 ESPECIFICAÇÕES DO PRODUTO                                  │
+│  ┌──────────────────────┐ ┌──────────────────────┐            │
+│  │ Design Exclusivo     │ │ Manual da Marca      │            │
+│  │ Sim, traço único     │ │ Guia técnico         │            │
+│  └──────────────────────┘ └──────────────────────┘            │
+│  ┌──────────────────────┐ ┌──────────────────────┐            │
+│  │ Reunião de Briefing  │ │ Entregas             │            │
+│  │ Chamada de 30min     │ │ AI, PDF, PSD         │            │
+│  └──────────────────────┘ └──────────────────────┘            │
+│  ┌──────────────────────┐ ┌──────────────────────┐            │
+│  │ Paleta de Cores      │ │ Suporte              │            │
+│  │ RGB, CMYK, HEX       │ │ Assistência técnica  │            │
+│  └──────────────────────┘ └──────────────────────┘            │
+│                                                                │
+│  ❓ DÚVIDAS FREQUENTES                                         │
+│                                                                │
+│  ▼ Como funciona a chamada de 30min...?                        │
+│    Realizamos uma chamada de 30min para entender...            │
+│                                                                │
+│  ▶ Recebo os arquivos editáveis?                              │
+│                                                                │
+│  ▶ Qual é a política de reembolso?                            │
+│                                                                │
+│  └──────────────────────────────────────────────────────────┘ │
+│                                                                │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Estrutura da Página (Mobile)
+
+```
+┌─────────────────────────────┐
+│     Nzayeto - Detalhes      │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│   ┌─────────────────────┐   │
+│   │                     │   │
+│   │  IMAGEM PRINCIPAL   │   │
+│   │                     │   │
+│   │  (Full Width)       │   │
+│   │                     │   │
+│   │                     │   │
+│   │                     │   │
+│   └─────────────────────┘   │
+│   ┌─┐ ┌─┐ ┌─┐ ┌─┐          │
+│   └─┘ └─┘ └─┘ └─┘          │
+│                             │
+│   🔥 PREMIUM                │
+│   Branding Sob Medida       │
+│                             │
+│   R$ 2.450,00               │
+│   R$ 3.200,00 (23% desc)    │
+│                             │
+│   Transforme a identidade   │
+│   visual da sua empresa...  │
+│                             │
+│   Cor:                      │
+│   ┌──────────────────────┐  │
+│   │ Digital              │  │
+│   └──────────────────────┘  │
+│   ┌──────────┐┌──────────┐  │
+│   │ Impresso ││Digital+I │  │
+│   └──────────┘└──────────┘  │
+│                             │
+│   Tamanho:                  │
+│   ┌──────────────────────┐  │
+│   │ Padrão               │  │
+│   └──────────────────────┘  │
+│   ┌──────────┐┌──────────┐  │
+│   │ Completo ││ Extra    │  │
+│   └──────────┘└──────────┘  │
+│                             │
+│   Disponível: 100 un.       │
+│                             │
+│   Qtd: - 1 +                │
+│   ┌──────────────────────┐  │
+│   │ 🛒 Adicionar         │  │
+│   │    ao Carrinho       │  │
+│   └──────────────────────┘  │
+│                             │
+│   ┌──────────────────────┐  │
+│   │ ✅ Garantia de       │  │
+│   │    Satisfação        │  │
+│   │                      │  │
+│   │ Sua satisfação é     │  │
+│   │ nossa prioridade     │  │
+│   └──────────────────────┘  │
+│                             │
+│   ┌──────────────────────┐  │
+│   │ 📅 Prazo: 15 dias   │  │
+│   └──────────────────────┘  │
+│   ┌──────────────────────┐  │
+│   │ 🔄 Revisões: 3      │  │
+│   └──────────────────────┘  │
+│   ┌──────────────────────┐  │
+│   │ ⚠️  Regra de         │  │
+│   │    Negócio           │  │
+│   └──────────────────────┘  │
+│                             │
+│   📋 ESPECIFICAÇÕES         │
+│   ┌──────────────────────┐  │
+│   │ Design Exclusivo     │  │
+│   │ Sim, traço único     │  │
+│   └──────────────────────┘  │
+│   ┌──────────────────────┐  │
+│   │ Manual da Marca      │  │
+│   │ Guia técnico         │  │
+│   └──────────────────────┘  │
+│   (+ 4 atributos)           │
+│                             │
+│   ❓ DÚVIDAS FREQUENTES     │
+│   ▼ Como funciona...?       │
+│     Resposta aqui...        │
+│   ▶ Recebo arquivos...?     │
+│   ▶ Política reembolso...?  │
+│                             │
+└─────────────────────────────┘
+```
+
+---
+
+## Estados da Página
+
+### ✅ Estado de Sucesso
+```
+✓ Produto carregado
+✓ Imagens carregadas
+✓ Variantes disponíveis
+✓ Atributos exibidos
+✓ FAQ funcional
+```
+
+### ⏳ Estado de Carregamento
+```
+┌─────────────────────────────┐
+│                             │
+│         ⊙ ⊙ ⊙              │
+│      Carregando...          │
+│                             │
+└─────────────────────────────┘
+```
+
+### ❌ Estado de Erro
+```
+┌─────────────────────────────┐
+│                             │
+│      ⚠️  Erro               │
+│   Produto não encontrado    │
+│                             │
+│  [Voltar para Produtos]     │
+│                             │
+└─────────────────────────────┘
+```
+
+---
+
+## Fluxo do Usuário
+
+```
+1. Usuário entra em /products/[id]
+   ↓
+2. Página carrega dados do Supabase
+   ├─ Produto
+   ├─ Imagens
+   ├─ Variantes
+   └─ Atributos
+   ↓
+3. Interface é renderizada
+   ├─ Galeria
+   ├─ Seleção
+   ├─ Informações
+   └─ FAQ
+   ↓
+4. Usuário seleciona:
+   ├─ Imagem da galeria
+   ├─ Cor e tamanho
+   ├─ Quantidade
+   └─ Clica em "Adicionar"
+   ↓
+5. Produto é adicionado ao carrinho
+```
+
+---
+
+## Componentes Reutilizáveis
+
+```
+ProductDetails (Main Component)
+├── ImageGallery (Sub-componente)
+│   ├─ Imagem Principal
+│   ├─ Navegação (Anterior/Próxima)
+│   └─ Thumbnails
+├── Seletor de Variantes
+│   ├─ Cores
+│   └─ Tamanhos
+├── Informações
+│   ├─ Nome e Preço
+│   ├─ Descrição
+│   └─ Botão Favoritar
+├── Detalhes
+│   ├─ Prazo
+│   ├─ Revisões
+│   └─ Regra de Negócio
+├── Especificações
+│   └─ Grid de Atributos
+└── FAQ
+    └─ Items Expandíveis
+
+ProductCard (Para Listagem)
+├─ Imagem em Miniatura
+├─ Nome e Preço
+├─ Badge
+├─ Botão Favoritar
+└─ Botão Adicionar ao Carrinho
+```
+
+---
+
+## Tabela de Cores Padrão
+
+| Elemento | Cor | Classe |
+|----------|-----|--------|
+| Fundo | Branco/Preto | `bg-background` |
+| Texto | Preto/Branco | `text-foreground` |
+| Primária | Azul | `bg-primary` |
+| Secundária | Cinza | `bg-muted` |
+| Sucesso | Verde | `text-green-500` |
+| Erro | Vermelho | `text-red-500` |
+| Aviso | Amarelo | `text-yellow-500` |
+
+---
+
+## Tipografia
+
+| Elemento | Tamanho | Peso |
+|----------|---------|------|
+| Título (H1) | 2.25rem | Bold |
+| Subtítulo (H2) | 1.875rem | Semibold |
+| Produto Nome | 1.875rem | Bold |
+| Preço | 1.875rem | Bold |
+| Rótulo | 0.875rem | Semibold |
+| Corpo | 1rem | Normal |
+| Pequeno | 0.875rem | Normal |
+
+---
+
+## Animações
+
+| Ação | Animação | Duração |
+|------|----------|---------|
+| Hover em button | Opacidade | 300ms |
+| Hover em card | Sombra | 300ms |
+| Transição de imagem | Fade | 300ms |
+| Abrir FAQ | Slide Down | 300ms |
+| Carrinho animado | Bounce | 500ms |
+
+---
+
+## Responsividade
+
+| Dispositivo | Tamanho | Layout |
+|-------------|---------|--------|
+| Celular | 320px - 640px | 1 coluna (full width) |
+| Tablet | 641px - 1024px | 1.5 colunas |
+| Desktop | 1025px+ | 2 colunas lado a lado |
+
+---
+
+**Pronto para visualizar! 🎨**

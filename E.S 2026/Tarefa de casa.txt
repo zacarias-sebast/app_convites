@@ -1,0 +1,37 @@
+Exercicios
+
+1- Numa bibioteca um estudante pode solicitar livros, estes livros solicitados deve ser verificados e cada livros deve ser revervado;
+Apresenta de forma simples e clara um diagrama de use case.
+2 -Um escritor tem a tarefa de editar documentos. Para a edição de documentos, deve currigir a ortografia e substituir testos.
+3- Num banco um cliente pode encerrar sua conta, mas também o funcionario do banco pode encerrar esta conta. Portanto ao 
+encerrar a conta pode ser levantar dinheiro, como depois dinheiro, apresentar o diagrama de use case apropriado a situação.
+4- Conside os seguintes uses cases;
+- pesquisar livros 
+- pesquisar por numero de catálogo
+- Pesquisar o numero do autor
+Elabore uma representação gráfica, usando usando Asta Cummunity, mostrando as relações existentes entre esses 3 use case
+
+
+Outros exercícios dados na sala pelo o professor
+
+1 - considera o autor (caso de uso) docente que tem a possibilidade fazer uma reservação da sala ou do material pedagogico
+modele essa situação.
+
+2 - No curso de engenharia informatica cada professor de calcular  
+a media depois da avalição continua, o professor deve calcular a media de frequencia 
+e no fim o proprio docente deve carcular a media final. Modelar essa situação por meio de um diagrama de use case
+
+3 - um cliente  tem a possibildade obter estrato bancorio, 
+realizar trenstferencia , rea lizar saque. Para realizar ou usufluir esses servico o cliente 
+deve fornecer uma identificacao: modelar essa situacao 
+modelo de caso de uso.
+
+4 - cada cliente de um banco teve a possibilidade abrir uma conta. Portanto para a sua vida finaceira pode abrir uma conta poupança
+ou pode abrir uma conta normal ou corrente. Modelar essa situacao com diagrama use case.
+
+-------------------------------------------
+Aula de Comercio electrónicos 
+
+Senha: DLMT55x#HO7G$g@ptB
+
+senha: DLMT55x#HO7G$g@ptB - Eugenio

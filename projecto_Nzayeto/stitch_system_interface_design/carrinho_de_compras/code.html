@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed-dim": "#95d3ba",
+                "on-primary-fixed-variant": "#0b513d",
+                "tertiary-fixed": "#6ffbbe",
+                "on-tertiary-fixed": "#002113",
+                "surface-container-lowest": "#ffffff",
+                "error": "#ba1a1a",
+                "background": "#f8f9ff",
+                "on-error-container": "#93000a",
+                "surface-dim": "#cbdbf5",
+                "tertiary-fixed-dim": "#4edea3",
+                "surface-bright": "#f8f9ff",
+                "surface-container": "#e5eeff",
+                "secondary": "#565e74",
+                "on-tertiary-container": "#31c98f",
+                "secondary-container": "#dae2fd",
+                "primary": "#003527",
+                "on-primary-container": "#80bea6",
+                "surface-container-highest": "#d3e4fe",
+                "on-surface-variant": "#404944",
+                "on-tertiary": "#ffffff",
+                "status-pending": "#F59E0B",
+                "surface-container-high": "#dce9ff",
+                "surface-gray": "#F8FAFC",
+                "on-surface": "#0b1c30",
+                "outline-variant": "#bfc9c3",
+                "on-error": "#ffffff",
+                "inverse-on-surface": "#eaf1ff",
+                "outline": "#707974",
+                "surface-container-low": "#eff4ff",
+                "inverse-surface": "#213145",
+                "tertiary-container": "#004f34",
+                "error-container": "#ffdad6",
+                "secondary-fixed": "#dae2fd",
+                "on-secondary-container": "#5c647a",
+                "primary-container": "#064e3b",
+                "surface-variant": "#d3e4fe",
+                "emerald-deep": "#064E3B",
+                "inverse-primary": "#95d3ba",
+                "tertiary": "#003623",
+                "surface": "#f8f9ff",
+                "on-secondary-fixed": "#131b2e",
+                "on-tertiary-fixed-variant": "#005236",
+                "secondary-fixed-dim": "#bec6e0",
+                "on-secondary-fixed-variant": "#3f465c",
+                "on-primary-fixed": "#002117",
+                "on-primary": "#ffffff",
+                "surface-tint": "#2b6954",
+                "on-background": "#0b1c30",
+                "slate-900": "#0F172A",
+                "primary-fixed": "#b0f0d6",
+                "status-success": "#10B981",
+                "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-sm": "8px",
+                "stack-md": "16px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "margin-desktop": "32px",
+                "base": "4px",
+                "container-max": "1280px",
+                "stack-lg": "32px"
+            },
+            "fontFamily": {
+                "body-sm": ["Inter"],
+                "display-lg": ["Inter"],
+                "display-lg-mobile": ["Inter"],
+                "headline-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "label-md": ["Inter"],
+                "headline-sm": ["Inter"]
+            },
+            "fontSize": {
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto bg-surface shadow-sm">
+<div class="flex items-center gap-gutter">
+<span class="font-display-lg text-display-lg font-bold text-emerald-deep">ZD Design</span>
+<div class="hidden md:flex gap-6">
+<a class="font-body-md text-body-md text-secondary hover:text-emerald-deep transition-colors" href="#">Products</a>
+<a class="font-body-md text-body-md text-secondary hover:text-emerald-deep transition-colors" href="#">Services</a>
+<a class="font-body-md text-body-md text-secondary hover:text-emerald-deep transition-colors" href="#">Tracking</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-emerald-deep">person</span>
+</button>
+<button class="p-2 bg-surface-container rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-emerald-deep">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-emerald-deep text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">1</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="flex flex-col lg:grid lg:grid-cols-12 gap-gutter">
+<!-- Shopping Cart List (Col 8) -->
+<div class="lg:col-span-8 space-y-gutter">
+<header class="flex items-center justify-between">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-emerald-deep">Carrinho de Compras</h1>
+<span class="font-body-md text-on-surface-variant">1 Item</span>
+</header>
+<!-- Validation Warning Card -->
+<div class="bg-error-container/40 border border-error/20 p-stack-md rounded-xl flex items-start gap-stack-md transition-all animate-pulse-subtle">
+<span class="material-symbols-outlined text-error mt-1" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-error-container">Aviso de Encomenda</p>
+<p class="font-body-md text-body-md text-on-error-container/80">Não é permitido encomenda de apenas um item para outras províncias. Adicione mais itens para habilitar o envio interprovincial.</p>
+</div>
+</div>
+<!-- Shopping Items -->
+<div class="space-y-stack-md">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-stack-md md:p-gutter rounded-xl shadow-sm flex flex-col md:flex-row gap-gutter group hover:shadow-md transition-all duration-300">
+<div class="w-full md:w-32 h-32 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A high-end professional product photograph of a premium minimalist wristwatch resting on a clean white surface. The lighting is soft and diffuse, creating elegant highlights and subtle shadows that emphasize the watch's craftsmanship. The color palette is composed of deep emerald greens and clean whites, reflecting a luxury boutique aesthetic. The mood is sophisticated, technical, and precise, highlighting professional quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6lmD7hnGjC8A7CP-WU9MnUgjAh5US0ibUwtj6dSJs7iU8hPc37YMSaRd0UIORqILPiAiQaszQrN7QT-lTbq2mRuXP0DFtXTyS_3dMs6B330MbOjIFB6l-d6Pq5vXn23im7yQSlvuBlf2iSm8ip-K-q0L7jtqFj3GRMJxPhbJawFdvk8l3kPwCAtzZxbWqT8eu8JSLxxzfGL8uN20aUMTCVQBQMHRnaRrtTJ4xQlkTMcneWCMf_nrxwVkusHb0U4orcuo1zJ31xVY"/>
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-emerald-deep">Relógio Executivo ZD Silver</h3>
+<p class="font-body-sm text-body-sm text-secondary">ID: PRD-2024-001 | Cor: Prata Metálico</p>
+</div>
+<button class="p-2 hover:bg-error-container/20 rounded-full text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="flex flex-wrap items-end justify-between mt-stack-md">
+<div class="flex items-center border border-outline-variant rounded-lg p-1 bg-surface">
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container rounded-md transition-colors">
+<span class="material-symbols-outlined text-secondary">remove</span>
+</button>
+<span class="px-6 font-headline-sm text-headline-sm">1</span>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container rounded-md transition-colors">
+<span class="material-symbols-outlined text-secondary">add</span>
+</button>
+</div>
+<div class="text-right">
+<p class="font-body-sm text-body-sm text-secondary line-through">Kz 45.000,00</p>
+<p class="font-headline-md text-headline-md text-emerald-deep">Kz 38.500,00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Location Alert -->
+<div class="bg-surface-container-high p-stack-md rounded-xl border-l-4 border-status-pending flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-status-pending" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<p class="font-body-md text-body-md text-on-surface">
+<span class="font-bold">Aviso Local (Uíge):</span> Pedidos de item único devem ser levantados pessoalmente em nossa loja central.
+                    </p>
+</div>
+</div>
+<!-- Order Summary (Col 4) -->
+<aside class="lg:col-span-4">
+<div class="bg-surface-container-lowest p-gutter rounded-xl shadow-lg border border-outline-variant sticky top-28">
+<h2 class="font-headline-md text-headline-md text-emerald-deep mb-stack-lg">Resumo do Pedido</h2>
+<div class="space-y-stack-md mb-gutter">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-secondary">Subtotal</span>
+<span class="font-body-md text-on-surface font-semibold">Kz 38.500,00</span>
+</div>
+<div class="space-y-stack-sm">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-secondary">Estimativa de Envio</span>
+<span class="font-body-md text-status-pending font-semibold">Cálculo Pendente</span>
+</div>
+<div class="bg-surface-container-low p-stack-sm rounded-lg border border-dashed border-outline-variant">
+<select class="w-full bg-transparent border-none focus:ring-0 font-body-sm text-on-surface-variant cursor-pointer">
+<option>Selecione a Província</option>
+<option>Luanda</option>
+<option>Uíge</option>
+<option>Benguela</option>
+<option>Huambo</option>
+</select>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-md flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">Total Estimado</span>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-emerald-deep block">Kz 38.500,00</span>
+<span class="text-[10px] text-secondary uppercase tracking-widest">IVA Incluído</span>
+</div>
+</div>
+</div>
+<div class="space-y-stack-sm">
+<button class="w-full bg-emerald-deep text-white py-4 rounded-xl font-headline-sm flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-[0.98] shadow-md">
+<span>Seguir para Checkout</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="w-full border border-slate-900 text-slate-900 py-3 rounded-xl font-body-md hover:bg-surface-container transition-all">
+                            Continuar Comprando
+                        </button>
+</div>
+<!-- Payment Badges -->
+<div class="mt-gutter pt-gutter border-t border-outline-variant flex justify-center gap-4 opacity-50">
+<span class="material-symbols-outlined text-2xl" title="Pagamento Seguro">lock</span>
+<span class="material-symbols-outlined text-2xl" title="Visa">credit_card</span>
+<span class="material-symbols-outlined text-2xl" title="Multicaixa">account_balance</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-low border-t border-outline-variant py-stack-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-emerald-deep">ZD Design</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-stack-sm">Transformando ideias em marcas premium e produtos de excelência.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Loja</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Produtos</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Serviços</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Tracking</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Suporte</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">About</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">FAQ</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Help</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Legal</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Terms</a>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-4">© 2024 ZD Design. All rights reserved.</p>
+</div>
+</footer>
+<!-- Micro-interaction for quantity buttons -->
+<script>
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.add('scale-95');
+                setTimeout(() => this.classList.remove('scale-95'), 150);
+            });
+        });
+    </script>
+</body></html>

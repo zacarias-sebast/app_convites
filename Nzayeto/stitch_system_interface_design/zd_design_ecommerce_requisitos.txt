@@ -1,0 +1,113 @@
+
+ZD DESIGN - DOCUMENTO DE REQUISITOS DO E-COMMERCE
+
+==================================================
+1. RESPONSABILIDADES DA EQUIPA DE DESIGN
+==================================================
+
+- Criar identidade visual moderna e profissional.
+- Desenvolver UI/UX responsiva para mobile e desktop.
+- Criar telas do sistema: login, cadastro, catálogo, carrinho, checkout e dashboard.
+- Definir paleta de cores e tipografia.
+- Criar banners promocionais e imagens institucionais.
+- Garantir experiência intuitiva para o usuário.
+- Desenvolver componentes visuais reutilizáveis.
+- Criar protótipos navegáveis.
+- Implementar dark mode opcional.
+- Criar layouts inspirados em Shopify, Amazon moderno e Mercado Livre premium.
+
+==================================================
+2. RESPONSABILIDADES TÉCNICAS / BACKEND
+==================================================
+
+- Criar estrutura do banco de dados.
+- Implementar autenticação e autorização.
+- Gerenciar produtos, clientes e encomendas.
+- Implementar regras de negócio.
+- Criar sistema de aprovação manual de pagamentos.
+- Controlar permissões entre administrador e gerente.
+- Criar APIs seguras.
+- Implementar upload de comprovativos e imagens.
+- Automatizar remoção de clientes inativos após 1 mês sem compras.
+- Implementar estados de pagamento e reservas.
+
+==================================================
+3. ENTIDADES DO SISTEMA
+==================================================
+
+- Produtos
+- Venda
+- ItemVenda
+- Clientes
+- Encomenda
+- Usuário
+- Pagamento
+- Localização
+- Reserva
+
+==================================================
+4. REGRAS DE NEGÓCIO
+==================================================
+
+- Clientes sem compras após 1 mês devem ser removidos automaticamente.
+- Clientes com histórico de compras permanecem cadastrados.
+- Não permitir adicionar produtos ao carrinho sem completar perfil.
+- Serviços personalizados exigem descrição detalhada e upload de imagens.
+- Pagamento dos serviços deve ser presencial.
+- Para outras províncias não é permitido encomenda de apenas um item.
+- No município do Uíge, um único item deve ser retirado presencialmente.
+- Pagamentos exigem envio de comprovativo.
+- Pagamentos em bancos diferentes aguardam mínimo 24h para confirmação.
+- Após pagamento, estado muda para reserva pendente.
+
+==================================================
+5. SERVIÇOS DISPONÍVEIS
+==================================================
+
+- Letreiros Luminosos
+- Timbragem
+- Estampagem
+- Convites e Panfletos
+- Confecção de Carimbos
+
+==================================================
+6. SUGESTÕES ESTRATÉGICAS
+==================================================
+
+- Integração com WhatsApp para atendimento.
+- Sistema de orçamento antes da compra de serviços.
+- Rastreamento de encomendas.
+- Sistema de cupões e promoções.
+- Integração com mapas e bairros.
+- Pré-visualização de uploads enviados.
+- Dashboard com gráficos e estatísticas.
+- Logs administrativos e controle de acesso.
+- Sistema de notificações automáticas.
+
+==================================================
+7. TECNOLOGIAS RECOMENDADAS
+==================================================
+
+Frontend:
+- React.js
+- Next.js
+- Tailwind CSS
+
+Backend:
+- Node.js
+- Express.js
+
+Banco de Dados:
+- MySQL ou PostgreSQL
+
+Uploads:
+- Cloudinary
+
+Autenticação:
+- JWT
+
+==================================================
+FINALIZAÇÃO
+==================================================
+
+Documento preparado para auxiliar a equipa de design, desenvolvimento e gestão do projecto do e-commerce ZD Design.

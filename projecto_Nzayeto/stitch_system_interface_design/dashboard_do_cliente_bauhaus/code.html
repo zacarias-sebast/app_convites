@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZD DESIGN | Dashboard do Cliente</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1a1a1a",
+                    "on-primary-container": "#1a1a1a",
+                    "secondary-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1a1a1a",
+                    "background": "#f5f0e8",
+                    "surface-tint": "#1a1a1a",
+                    "tertiary-fixed-dim": "#a8c6ff",
+                    "on-secondary-fixed-variant": "#1a1a1a",
+                    "on-surface": "#1a1a1a",
+                    "tertiary": "#0055ff",
+                    "on-primary-fixed": "#1a1a1a",
+                    "primary-fixed-dim": "#e6b800",
+                    "tertiary-container": "#d6e3ff",
+                    "primary-container": "#ffcc00",
+                    "surface-variant": "#e8e3da",
+                    "surface-bright": "#faf7f2",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d6d1c9",
+                    "primary": "#1a1a1a",
+                    "error": "#cc0000",
+                    "surface-container-low": "#f2ede5",
+                    "on-primary-fixed-variant": "#1a1a1a",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffcc00",
+                    "on-tertiary-container": "#1a1a1a",
+                    "on-secondary": "#1a1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb3ab",
+                    "on-secondary-container": "#1a1a1a",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#1a1a1a",
+                    "on-background": "#1a1a1a",
+                    "inverse-primary": "#f5f0e8",
+                    "on-surface-variant": "#4a4a4a",
+                    "on-tertiary-fixed-variant": "#1a1a1a",
+                    "secondary": "#e63b2e",
+                    "surface-container-highest": "#e2ddd4",
+                    "outline-variant": "#d0cbc3",
+                    "outline": "#1a1a1a",
+                    "secondary-fixed": "#ffdad6",
+                    "surface": "#f5f0e8",
+                    "surface-container-high": "#e8e3da",
+                    "surface-container": "#eee9e0",
+                    "inverse-on-surface": "#f5f0e8",
+                    "tertiary-fixed": "#d6e3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "0px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "display": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neo-shadow {
+            box-shadow: 6px 6px 0px 0px rgba(26, 26, 26, 1);
+        }
+        .neo-shadow-sm {
+            box-shadow: 4px 4px 0px 0px rgba(26, 26, 26, 1);
+        }
+        .neo-shadow-active {
+            box-shadow: 0px 0px 0px 0px rgba(26, 26, 26, 1);
+            transform: translate(4px, 4px);
+        }
+        body {
+            background-color: #f5f0e8;
+            color: #1a1a1a;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col md:flex-row overflow-x-hidden">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="fixed inset-y-0 left-0 z-50 flex flex-col h-full w-64 border-r-4 border-primary bg-background dark:bg-background md:block hidden">
+<div class="p-6 border-b-4 border-primary bg-primary text-background">
+<h1 class="font-headline font-black text-2xl text-primary-fixed tracking-tighter uppercase">ZD DESIGN</h1>
+<p class="font-body text-[10px] font-bold uppercase tracking-widest opacity-80 mt-1">Premium Bauhaus Shop</p>
+</div>
+<nav class="flex-1 py-6 space-y-2 overflow-y-auto">
+<!-- Active: Home -->
+<a class="bg-primary-container text-primary border-2 border-primary shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] m-2 p-3 flex items-center gap-3 transition-transform duration-200 active:scale-95 group" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-headline font-bold uppercase text-sm">Home</span>
+</a>
+<a class="text-primary p-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-200 active:scale-95 m-2 border-2 border-transparent" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="font-headline font-bold uppercase text-sm">Produtos</span>
+</a>
+<a class="text-primary p-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-200 active:scale-95 m-2 border-2 border-transparent" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-headline font-bold uppercase text-sm">Serviços</span>
+</a>
+<a class="text-primary p-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-200 active:scale-95 m-2 border-2 border-transparent" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-headline font-bold uppercase text-sm">Rastreamento</span>
+</a>
+</nav>
+<div class="p-4 border-t-4 border-primary bg-surface-variant">
+<button class="w-full bg-secondary text-on-primary font-headline font-black uppercase py-3 border-2 border-primary neo-shadow-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                Newsletter
+            </button>
+</div>
+<div class="p-2 border-t-4 border-primary">
+<a class="text-primary p-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-200 active:scale-95 w-full" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-headline font-bold uppercase text-sm">Settings</span>
+</a>
+<a class="text-primary p-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-200 active:scale-95 w-full" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-headline font-bold uppercase text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Mobile Top Bar -->
+<header class="md:hidden flex justify-between items-center px-6 py-4 w-full bg-background border-b-4 border-primary sticky top-0 z-50">
+<span class="font-headline font-black text-2xl tracking-tighter text-primary uppercase">ZD DESIGN</span>
+<button class="material-symbols-outlined text-3xl" id="mobile-menu-toggle">menu</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-6 md:p-12">
+<!-- Welcome Section -->
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="bg-primary text-background px-3 py-1 font-headline font-black uppercase text-xs mb-2 inline-block">Área do Cliente</span>
+<h2 class="text-5xl md:text-7xl font-black uppercase leading-none">Olá, Augusto.</h2>
+<p class="font-body text-lg mt-4 max-w-xl font-medium">Bem-vindo ao seu painel Bauhaus. Aqui você controla suas formas, funções e encomendas.</p>
+</div>
+<div>
+<button class="bg-primary-container text-primary font-headline font-black uppercase px-8 py-5 text-xl border-4 border-primary neo-shadow active:translate-x-1 active:translate-y-1 active:shadow-none transition-all flex items-center gap-4">
+                    Start Custom Project
+                    <span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+</header>
+<!-- Bento Grid Stats & Charts -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+<!-- Historical Chart (Brutalist Bars) -->
+<div class="lg:col-span-2 bg-background border-4 border-primary p-8 neo-shadow flex flex-col h-full">
+<div class="flex justify-between items-start mb-8">
+<h3 class="text-3xl uppercase">Histórico de Compras</h3>
+<div class="flex gap-2">
+<span class="w-4 h-4 bg-primary"></span>
+<span class="font-headline font-bold text-xs uppercase">Volume Anual (k€)</span>
+</div>
+</div>
+<div class="flex-1 flex items-end justify-between gap-4 h-64 border-b-4 border-primary pb-2">
+<!-- Bar Chart Implementation -->
+<div class="w-full bg-tertiary border-2 border-primary hover:bg-primary transition-colors" style="height: 40%"></div>
+<div class="w-full bg-secondary border-2 border-primary hover:bg-primary transition-colors" style="height: 65%"></div>
+<div class="w-full bg-primary border-2 border-primary hover:bg-tertiary transition-colors" style="height: 25%"></div>
+<div class="w-full bg-primary-container border-2 border-primary hover:bg-primary transition-colors" style="height: 85%"></div>
+<div class="w-full bg-tertiary border-2 border-primary hover:bg-primary transition-colors" style="height: 55%"></div>
+<div class="w-full bg-secondary border-2 border-primary hover:bg-primary transition-colors" style="height: 95%"></div>
+<div class="w-full bg-primary border-2 border-primary hover:bg-tertiary transition-colors" style="height: 45%"></div>
+</div>
+<div class="flex justify-between mt-4 font-headline font-black text-xs uppercase tracking-tighter">
+<span>JAN</span><span>FEV</span><span>MAR</span><span>ABR</span><span>MAI</span><span>JUN</span><span>JUL</span>
+</div>
+</div>
+<!-- Profile Summary Card -->
+<div class="bg-tertiary text-background border-4 border-primary p-8 neo-shadow flex flex-col justify-between">
+<div>
+<div class="w-24 h-24 border-4 border-background mb-6 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover grayscale" data-alt="A striking portrait of a sophisticated man with a focused expression, shot in a high-contrast black and white style. The background is a minimalist studio setting with sharp, architectural shadows. The lighting is dramatic and directional, emphasizing the clean lines and geometric composition typical of Bauhaus photography. The overall aesthetic is raw, professional, and brutally modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKSbG0hamUBoCQ-sM6-sAOu2kSCZeqI7WfwmpCvbVANAE5wC-t2zCsF_jhXnH5ig_G8k0y34UdzIQEi6s6Vpa3khVMseEWICJ_k8UyULo9mwsO9_7tVNA7LlEzAS2-Ss79jfBKRaEdNegZ3kIqnt8bh4S6wwWv3s9v9k2I45MqykLXoXzoefqrR6WVljPnXsUVSQdBv0FdnzxOKG-el1Nza9y6_QNJGGXB5Awnvu28OM0QjZaT1nWB8ABHka1Zyu5eLXtvkXt-SiQ"/>
+</div>
+<h3 class="text-3xl uppercase leading-none mb-2">Plano Premium</h3>
+<p class="font-headline font-bold text-sm uppercase opacity-80">Membro desde Out 2023</p>
+</div>
+<div class="mt-8 border-t-2 border-background pt-4">
+<div class="flex justify-between items-center mb-2">
+<span class="font-headline font-bold uppercase text-xs">Créditos de Design</span>
+<span class="font-headline font-black text-xl">85%</span>
+</div>
+<div class="w-full h-4 border-2 border-background p-0.5">
+<div class="h-full bg-background" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Orders Table -->
+<section class="mb-12">
+<h3 class="text-4xl uppercase mb-8 border-l-8 border-secondary pl-4">Encomendas Recentes</h3>
+<div class="overflow-x-auto border-4 border-primary neo-shadow">
+<table class="w-full text-left font-headline">
+<thead>
+<tr class="bg-primary text-background">
+<th class="p-5 uppercase font-black tracking-tight border-r-2 border-background">ID Encomenda</th>
+<th class="p-5 uppercase font-black tracking-tight border-r-2 border-background">Produto</th>
+<th class="p-5 uppercase font-black tracking-tight border-r-2 border-background">Status</th>
+<th class="p-5 uppercase font-black tracking-tight border-r-2 border-background">Data</th>
+<th class="p-5 uppercase font-black tracking-tight">Total</th>
+</tr>
+</thead>
+<tbody class="bg-background">
+<tr class="border-b-4 border-primary hover:bg-surface-variant transition-colors group">
+<td class="p-5 font-black border-r-2 border-primary">#ZD-9021</td>
+<td class="p-5 font-bold uppercase border-r-2 border-primary">Cadeira Bauhaus Mod. 4</td>
+<td class="p-5 border-r-2 border-primary">
+<span class="bg-primary-container text-primary font-black uppercase text-xs px-3 py-1 border-2 border-primary">Em Produção</span>
+</td>
+<td class="p-5 font-medium border-r-2 border-primary">12/05/2024</td>
+<td class="p-5 font-black text-xl">€ 1.250,00</td>
+</tr>
+<tr class="border-b-4 border-primary hover:bg-surface-variant transition-colors group">
+<td class="p-5 font-black border-r-2 border-primary">#ZD-8843</td>
+<td class="p-5 font-bold uppercase border-r-2 border-primary">Luminária Industrial "Sphere"</td>
+<td class="p-5 border-r-2 border-primary">
+<span class="bg-tertiary-container text-primary font-black uppercase text-xs px-3 py-1 border-2 border-primary">Enviado</span>
+</td>
+<td class="p-5 font-medium border-r-2 border-primary">05/05/2024</td>
+<td class="p-5 font-black text-xl">€ 450,00</td>
+</tr>
+<tr class="hover:bg-surface-variant transition-colors group">
+<td class="p-5 font-black border-r-2 border-primary">#ZD-8720</td>
+<td class="p-5 font-bold uppercase border-r-2 border-primary">Mesa de Centro Concreto</td>
+<td class="p-5 border-r-2 border-primary">
+<span class="bg-surface-dim text-primary font-black uppercase text-xs px-3 py-1 border-2 border-primary opacity-50">Concluído</span>
+</td>
+<td class="p-5 font-medium border-r-2 border-primary">28/04/2024</td>
+<td class="p-5 font-black text-xl">€ 2.100,00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Quick Actions Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-background border-4 border-primary p-6 neo-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer">
+<span class="material-symbols-outlined text-4xl mb-4">support_agent</span>
+<h4 class="text-xl uppercase mb-2">Suporte Direto</h4>
+<p class="font-body text-sm font-medium">Fale com um designer ZD em tempo real.</p>
+</div>
+<div class="bg-background border-4 border-primary p-6 neo-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer">
+<span class="material-symbols-outlined text-4xl mb-4">download</span>
+<h4 class="text-xl uppercase mb-2">Manuais &amp; Assets</h4>
+<p class="font-body text-sm font-medium">Baixe instruções e blueprints das suas peças.</p>
+</div>
+<div class="bg-background border-4 border-primary p-6 neo-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer">
+<span class="material-symbols-outlined text-4xl mb-4">history_edu</span>
+<h4 class="text-xl uppercase mb-2">Meus Projetos</h4>
+<p class="font-body text-sm font-medium">Reveja rascunhos e briefs personalizados.</p>
+</div>
+<div class="bg-background border-4 border-primary p-6 neo-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer">
+<span class="material-symbols-outlined text-4xl mb-4">payments</span>
+<h4 class="text-xl uppercase mb-2">Faturas</h4>
+<p class="font-body text-sm font-medium">Acesse seu histórico fiscal e pagamentos.</p>
+</div>
+</section>
+</main>
+<!-- Footer (Authority: JSON) -->
+<footer class="w-full mt-auto py-12 px-6 flex flex-col md:flex-row justify-between items-start gap-8 bg-primary dark:bg-surface-variant border-t-4 border-primary">
+<div class="flex flex-col gap-4">
+<span class="font-headline font-black text-xl text-primary-fixed uppercase tracking-tighter">ZD DESIGN</span>
+<p class="font-body text-sm font-bold uppercase text-background dark:text-on-surface">© 2024 ZD DESIGN. FORM FOLLOWS FUNCTION.</p>
+</div>
+<div class="flex flex-wrap gap-6 md:gap-12">
+<a class="font-body text-sm font-bold uppercase text-background hover:text-secondary-fixed transition-colors" href="#">Sobre Nós</a>
+<a class="font-body text-sm font-bold uppercase text-background hover:text-secondary-fixed transition-colors" href="#">Privacidade</a>
+<a class="font-body text-sm font-bold uppercase text-background hover:text-secondary-fixed transition-colors" href="#">Termos</a>
+<a class="font-body text-sm font-bold uppercase text-background hover:text-secondary-fixed transition-colors" href="#">Contato</a>
+</div>
+</footer>
+<!-- Interactive Layer: Bauhaus Background Pattern (Atmospheric Interaction) -->
+<div class="fixed inset-0 pointer-events-none -z-10 opacity-5 overflow-hidden" id="bauhaus-bg"></div>
+<script>
+        // Bauhaus Background Micro-interaction
+        const bg = document.getElementById('bauhaus-bg');
+        const elements = ['rect', 'circle', 'triangle'];
+        const colors = ['#ffcc00', '#e63b2e', '#0055ff', '#1a1a1a'];
+
+        for(let i=0; i<15; i++) {
+            const shape = document.createElement('div');
+            const size = Math.random() * 200 + 50;
+            const type = elements[Math.floor(Math.random() * elements.length)];
+            
+            shape.style.position = 'absolute';
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            shape.style.left = `${Math.random() * 100}%`;
+            shape.style.top = `${Math.random() * 100}%`;
+            shape.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            shape.style.border = '2px solid #1a1a1a';
+            
+            if(type === 'circle') shape.style.borderRadius = '50%';
+            if(type === 'triangle') {
+                shape.style.backgroundColor = 'transparent';
+                shape.style.width = '0';
+                shape.style.height = '0';
+                shape.style.borderLeft = `${size/2}px solid transparent`;
+                shape.style.borderRight = `${size/2}px solid transparent`;
+                shape.style.borderBottom = `${size}px solid ${colors[Math.floor(Math.random() * colors.length)]}`;
+            }
+
+            bg.appendChild(shape);
+        }
+
+        // Float motion on scroll
+        window.addEventListener('scroll', () => {
+            const shapes = bg.querySelectorAll('div');
+            const scrolled = window.pageYOffset;
+            shapes.forEach((s, i) => {
+                const speed = (i + 1) * 0.05;
+                s.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+            });
+        });
+
+        // Mobile Menu Toggle logic
+        const toggle = document.getElementById('mobile-menu-toggle');
+        toggle.addEventListener('click', () => {
+            const sidebar = document.querySelector('aside');
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('fixed');
+            sidebar.classList.toggle('inset-0');
+            sidebar.classList.toggle('z-[100]');
+            sidebar.classList.toggle('w-full');
+        });
+    </script>
+</body></html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Carrinho de Compras - ZD DESIGN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1a1a1a",
+                    "on-primary-container": "#1a1a1a",
+                    "secondary-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1a1a1a",
+                    "background": "#f5f0e8",
+                    "surface-tint": "#1a1a1a",
+                    "tertiary-fixed-dim": "#a8c6ff",
+                    "on-secondary-fixed-variant": "#1a1a1a",
+                    "on-surface": "#1a1a1a",
+                    "tertiary": "#0055ff",
+                    "on-primary-fixed": "#1a1a1a",
+                    "primary-fixed-dim": "#e6b800",
+                    "tertiary-container": "#d6e3ff",
+                    "primary-container": "#ffcc00",
+                    "surface-variant": "#e8e3da",
+                    "surface-bright": "#faf7f2",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d6d1c9",
+                    "primary": "#1a1a1a",
+                    "error": "#cc0000",
+                    "surface-container-low": "#f2ede5",
+                    "on-primary-fixed-variant": "#1a1a1a",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffcc00",
+                    "on-tertiary-container": "#1a1a1a",
+                    "on-secondary": "#1a1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb3ab",
+                    "on-secondary-container": "#1a1a1a",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#1a1a1a",
+                    "on-background": "#1a1a1a",
+                    "inverse-primary": "#f5f0e8",
+                    "on-surface-variant": "#4a4a4a",
+                    "on-tertiary-fixed-variant": "#1a1a1a",
+                    "secondary": "#e63b2e",
+                    "surface-container-highest": "#e2ddd4",
+                    "outline-variant": "#d0cbc3",
+                    "outline": "#1a1a1a",
+                    "secondary-fixed": "#ffdad6",
+                    "surface": "#f5f0e8",
+                    "surface-container-high": "#e8e3da",
+                    "surface-container": "#eee9e0",
+                    "inverse-on-surface": "#f5f0e8",
+                    "tertiary-fixed": "#d6e3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "display": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, .font-headline {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .bauhaus-shadow {
+        box-shadow: 6px 6px 0px 0px rgba(26, 26, 26, 1);
+      }
+      .active-shadow {
+        box-shadow: 0px 0px 0px 0px rgba(26, 26, 26, 1);
+      }
+    </style>
+</head>
+<body class="bg-background text-primary min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 border-b-4 border-primary dark:border-primary-fixed bg-background shadow-[6px_6px_0px_0px_rgba(26,26,26,1)]">
+<nav class="flex justify-between items-center px-6 py-4 w-full bg-background">
+<div class="font-headline font-black text-3xl tracking-tighter text-primary dark:text-primary-fixed">
+                ZD DESIGN
+            </div>
+<div class="hidden md:flex items-center gap-8 font-headline uppercase font-black text-xl">
+<a class="text-primary hover:text-tertiary transition-colors" href="#">Produtos</a>
+<a class="text-primary hover:text-tertiary transition-colors" href="#">Serviços</a>
+<a class="text-primary hover:text-tertiary transition-colors" href="#">Rastreamento</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-secondary border-b-4 border-secondary pb-1 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] px-1.5 py-0.5 font-bold">3</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="flex-grow container mx-auto px-4 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Items Section -->
+<div class="lg:col-span-8 space-y-8">
+<h1 class="text-6xl font-black uppercase tracking-tighter leading-none mb-12">
+                    Carrinho <span class="text-tertiary">/</span> <br/>Seu Pedido
+                </h1>
+<!-- Delivery Alert -->
+<div class="bg-secondary text-on-primary p-6 border-4 border-primary bauhaus-shadow flex items-start gap-4">
+<span class="material-symbols-outlined text-4xl" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<p class="font-headline font-extrabold uppercase text-lg">Aviso de Entrega Interprovincial</p>
+<p class="font-body text-sm mt-1">Devido a regulamentações regionais, entregas fora de São Paulo podem sofrer acréscimo de 3 dias úteis e taxas adicionais de trânsito.</p>
+</div>
+</div>
+<!-- Product List -->
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="bg-surface-bright border-4 border-primary bauhaus-shadow p-6 flex flex-col md:flex-row items-center gap-6 group hover:-translate-x-1 hover:-translate-y-1 transition-transform">
+<div class="w-32 h-32 flex-shrink-0 bg-primary-container border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A studio photograph of a modern minimalist Bauhaus-inspired table lamp with clean geometric lines, featuring a primary yellow base and black accents. The lighting is high-contrast with sharp shadows against a warm off-white background, reflecting a professional product photography style with a neo-brutalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRr6iRRR0eOPzrEpehS1M3g07jNWvKGcY-3IOyuIjZtTnXpY7BlWVT5myqcNWnQX0CDmElLgJmHA_DEtJSiGp9BlPsmDITE9uN-rMVjXUWOrI-ara66noxLFVVG7HA48qaqrX10fRw_Eu_O4jL2ibIuNZlmTY1VYJsJOz6ZEDqN4QTISAxr-WlkQqfD7F4JBGhdGhKnV4qR95z3zVOCK9e1UQ_O677K6zeHnM309q40fMj-wN_NZ4kHO_6sKb5GMZ4Y9sIX7rzMEw"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline font-black uppercase text-2xl">Luminária Bauhaus Mod. 01</h3>
+<p class="text-on-surface-variant font-body text-sm mt-1">Acabamento em metal fosco. Edição Limitada.</p>
+<div class="mt-4 flex items-center gap-4">
+<div class="flex border-2 border-primary">
+<button class="px-3 py-1 hover:bg-primary-container font-black border-r-2 border-primary">-</button>
+<span class="px-4 py-1 font-headline font-bold">01</span>
+<button class="px-3 py-1 hover:bg-primary-container font-black border-l-2 border-primary">+</button>
+</div>
+<button class="text-secondary font-headline font-bold uppercase text-xs hover:underline decoration-2">Remover</button>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-black text-2xl italic">R$ 850,00</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-bright border-4 border-primary bauhaus-shadow p-6 flex flex-col md:flex-row items-center gap-6 group hover:-translate-x-1 hover:-translate-y-1 transition-transform">
+<div class="w-32 h-32 flex-shrink-0 bg-tertiary-container border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Architectural detail of a brutalist building with strong concrete patterns and deep shadows. The composition is highly geometric and abstract, captured in bright daylight with a clear blue sky. The visual style is raw and graphic, emphasizing industrial materials and functional design in line with Bauhaus principles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBBb5u758oTm_e8is9h2KmxhdDPS33GOvrtYlrFtn7QXTsAtIJXk7JrVCnk3GTvQipAKtYQK_24KGt8LwCfmy7gWZTb61YuyGmXsmuo27E40yrkCudFDh3F2rDtrTiB7iqoEKqF3bQn7UHcPaFi2j_PzafKGhZ1ZRNsgW3gYEg29t6VqyoKnBtDj72EkMQCfnfmlnmfIg46msPOIUfCh0zwTQX9My97RwhZ2wqmhD-dbi6FKPkfJdoN4bsMTnC0q1TPMIXhWVcmCw"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline font-black uppercase text-2xl">Poster Estrutural Brutalista</h3>
+<p class="text-on-surface-variant font-body text-sm mt-1">Impressão Fine Art. 70x100cm.</p>
+<div class="mt-4 flex items-center gap-4">
+<div class="flex border-2 border-primary">
+<button class="px-3 py-1 hover:bg-primary-container font-black border-r-2 border-primary">-</button>
+<span class="px-4 py-1 font-headline font-bold">02</span>
+<button class="px-3 py-1 hover:bg-primary-container font-black border-l-2 border-primary">+</button>
+</div>
+<button class="text-secondary font-headline font-bold uppercase text-xs hover:underline decoration-2">Remover</button>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-black text-2xl italic">R$ 320,00</p>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row gap-4">
+<button class="border-4 border-primary px-8 py-4 font-headline font-black uppercase text-lg hover:bg-surface-variant active:translate-x-1 active:translate-y-1 transition-all">
+                        Continuar Comprando
+                    </button>
+</div>
+</div>
+<!-- Summary Column -->
+<div class="lg:col-span-4">
+<div class="bg-primary-container border-4 border-primary bauhaus-shadow p-8 sticky top-32">
+<h2 class="font-headline font-black text-4xl uppercase mb-8 border-b-4 border-primary pb-4">Resumo</h2>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-center font-headline font-bold text-lg">
+<span class="uppercase">Subtotal</span>
+<span>R$ 1.170,00</span>
+</div>
+<div class="flex justify-between items-center font-headline font-bold text-lg">
+<span class="uppercase">Entrega</span>
+<span>R$ 45,00</span>
+</div>
+<div class="flex justify-between items-center font-headline font-bold text-lg text-secondary">
+<span class="uppercase">Desconto (BAUHAUS10)</span>
+<span>- R$ 117,00</span>
+</div>
+</div>
+<div class="border-t-4 border-primary pt-6 mb-10">
+<div class="flex justify-between items-end">
+<span class="font-headline font-black uppercase text-xl">Total</span>
+<span class="font-headline font-black text-5xl">R$ 1.098,00</span>
+</div>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-primary text-white border-4 border-primary px-8 py-6 font-headline font-black uppercase text-xl hover:bg-on-surface-variant active:translate-x-1 active:translate-y-1 active:shadow-none transition-all bauhaus-shadow">
+                            Seguir para Checkout
+                        </button>
+<p class="text-center font-body text-xs font-bold uppercase tracking-widest text-primary/60">
+                            Ambiente 100% Seguro
+                        </p>
+</div>
+<div class="mt-12">
+<p class="font-headline font-bold uppercase text-sm mb-4">Cupom de Desconto</p>
+<div class="flex border-4 border-primary">
+<input class="w-full bg-transparent border-none focus:ring-0 font-headline font-bold uppercase px-4" placeholder="CÓDIGO" type="text"/>
+<button class="bg-primary text-white px-4 py-2 font-headline font-bold uppercase hover:bg-on-surface-variant transition-colors">
+                                Aplicar
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto border-t-4 border-primary bg-primary dark:bg-surface-variant">
+<div class="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="flex flex-col gap-4">
+<div class="font-headline font-black text-xl text-primary-fixed uppercase">
+                    ZD DESIGN
+                </div>
+<p class="text-background max-w-xs font-body text-sm uppercase font-bold opacity-80">
+                    A revolução do design através da simplicidade radical e funcionalidade bruta.
+                </p>
+</div>
+<div class="flex flex-wrap gap-x-12 gap-y-6">
+<div class="flex flex-col gap-4">
+<span class="text-secondary font-black uppercase text-sm">Empresa</span>
+<a class="text-background hover:text-secondary-fixed transition-colors font-body text-sm font-bold uppercase" href="#">Sobre Nós</a>
+<a class="text-background hover:text-secondary-fixed transition-colors font-body text-sm font-bold uppercase" href="#">Contato</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-secondary font-black uppercase text-sm">Legal</span>
+<a class="text-background hover:text-secondary-fixed transition-colors font-body text-sm font-bold uppercase" href="#">Privacidade</a>
+<a class="text-background hover:text-secondary-fixed transition-colors font-body text-sm font-bold uppercase" href="#">Termos</a>
+</div>
+</div>
+<div class="md:text-right flex flex-col gap-4">
+<p class="font-body text-sm font-bold uppercase text-background">
+                    © 2024 ZD DESIGN. FORM FOLLOWS FUNCTION.
+                </p>
+<div class="flex md:justify-end gap-4">
+<span class="material-symbols-outlined text-background hover:text-primary-container cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-background hover:text-primary-container cursor-pointer" data-icon="public">public</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'translate(2px, 2px)';
+                if(btn.classList.contains('bauhaus-shadow')) {
+                    btn.style.boxShadow = '2px 2px 0px 0px rgba(26,26,26,1)';
+                }
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = '';
+                if(btn.classList.contains('bauhaus-shadow')) {
+                    btn.style.boxShadow = '';
+                }
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = '';
+                if(btn.classList.contains('bauhaus-shadow')) {
+                    btn.style.boxShadow = '';
+                }
+            });
+        });
+
+        // Simple alert dismissal logic or other UI behavior could go here
+    </script>
+</body></html>
