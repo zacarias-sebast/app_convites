@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#95d3ba",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f8f9ff",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#cbdbf5",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container": "#e5eeff",
+                        "secondary": "#565e74",
+                        "on-tertiary-container": "#31c98f",
+                        "secondary-container": "#dae2fd",
+                        "primary": "#003527",
+                        "on-primary-container": "#80bea6",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-surface-variant": "#404944",
+                        "on-tertiary": "#ffffff",
+                        "status-pending": "#F59E0B",
+                        "surface-container-high": "#dce9ff",
+                        "surface-gray": "#F8FAFC",
+                        "on-surface": "#0b1c30",
+                        "outline-variant": "#bfc9c3",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "outline": "#707974",
+                        "surface-container-low": "#eff4ff",
+                        "inverse-surface": "#213145",
+                        "tertiary-container": "#004f34",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#dae2fd",
+                        "on-secondary-container": "#5c647a",
+                        "primary-container": "#064e3b",
+                        "surface-container-highest": "#d3e4fe",
+                        "emerald-deep": "#064E3B",
+                        "inverse-primary": "#95d3ba",
+                        "tertiary": "#003623",
+                        "surface": "#f8f9ff",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-primary-fixed": "#002117",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#2b6954",
+                        "on-background": "#0b1c30",
+                        "slate-900": "#0F172A",
+                        "primary-fixed": "#b0f0d6",
+                        "status-success": "#10B981",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "base": "4px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .gallery-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .gallery-scrollbar::-webkit-scrollbar-thumb {
+            background: #bfc9c3;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface dark:bg-on-background shadow-sm flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-lg">
+<span class="font-display-lg text-display-lg font-bold text-emerald-deep dark:text-primary-fixed-dim">ZD Design</span>
+<div class="hidden md:flex gap-gutter">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-emerald-deep dark:hover:text-primary-fixed-dim font-body-md text-body-md transition-colors" href="#">Products</a>
+<a class="text-emerald-deep dark:text-primary-fixed-dim border-b-2 border-emerald-deep font-bold pb-1 font-body-md text-body-md" href="#">Services</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-emerald-deep dark:hover:text-primary-fixed-dim font-body-md text-body-md transition-colors" href="#">Tracking</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full focus:ring-2 focus:ring-emerald-deep w-64" placeholder="Buscar serviços..." type="text"/>
+</div>
+<button class="p-2 hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors rounded-full">
+<span class="material-symbols-outlined text-emerald-deep dark:text-primary-fixed-dim" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors rounded-full">
+<span class="material-symbols-outlined text-emerald-deep dark:text-primary-fixed-dim" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-24 pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-outline mb-stack-md font-label-md text-label-md">
+<ol class="flex items-center space-x-2">
+<li><a class="hover:text-emerald-deep" href="#">Início</a></li>
+<li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+<li><a class="hover:text-emerald-deep" href="#">Serviços Premium</a></li>
+<li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+<li class="text-emerald-deep font-bold">Branding Sob Medida</li>
+</ol>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Gallery & Details -->
+<div class="lg:col-span-7 space-y-gutter">
+<!-- Gallery Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden p-stack-md">
+<div class="aspect-[16/9] w-full rounded-lg bg-surface-container overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional creative studio environment showing a large high-resolution monitor displaying a sophisticated brand identity design project. The lighting is soft and natural, emphasizing a premium workspace with minimalist decor. The color palette features deep emerald greens and clean whites, reflecting a high-end boutique branding agency aesthetic. Professional design tools and a focused atmosphere convey expertise and precision." id="mainImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3NHnS4wAq2ZdntN0qLfwhURe_EMCpUZAgIRry4A3r5HWvTqGAKdNG4oIxAnWfSmp1ee8dPnCMYz9uNlBDkRXLKNNWLnY68OQFvQmkot8Xc7pXCGUTWMTQ6m67G570SfekuxCzUwNzl5bjZfWB4JVEMSlKNGdpynGCBFNTcn9UnUbgr5iGWLScmtFGLLP0ZDDcupJWRFEM53kSvKqsq02m_4TinltBQN8wftoq1SiWy2jOozKjf7cfqgqaf3SkCzAJsM9J0vd3Wn0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="flex gap-stack-sm mt-stack-md overflow-x-auto gallery-scrollbar pb-2">
+<button class="shrink-0 w-24 h-24 rounded-lg border-2 border-emerald-deep overflow-hidden" onclick="changeImage(this.src)">
+<img class="w-full h-full object-cover" data-alt="Close up of a brand style guide document on a desk with premium paper texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ8_Szf8gSrHY80phkNN1Xx0t4AohJVjZ3OpKqOXGjYukbjuLOCxEzmPDPv1S_Yxvz-UKndiF73ZKtPWaE6Zhd7DuNQqlmdtC6258SD8g6pwV1-sX8Tu1xDpP3qGgRoFMGAYM95vYP4fpRNbp7aJQcxu-WXEDnwRSmIy0mFABlPALjPu9lmiER-feYxPKiZT1QAizM-ZkPGgdF912HhsGj0lTPszSMI9CPSkYU1MeEue5m8quFW12oJaWRWgBVtF15I1ewT3D_HEU"/>
+</button>
+<button class="shrink-0 w-24 h-24 rounded-lg border-2 border-transparent hover:border-outline-variant overflow-hidden" onclick="changeImage(this.src)">
+<img class="w-full h-full object-cover" data-alt="A team of professional designers collaborating around a large wooden table in a bright modern office." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCot1OHlMrnMIsUjq_9iTOIjc0lNZwDz4DQzrTrW75YEYZuUzmSXdJdA1XUbop4bdvZXz6g8WaR_27dt6Irx1CNFuTnLUY__6ZqBEyow5j2VMYMXEzqgkI7IDcjw4_TlMjqgYNRbcHxsWdiOJcBzMwoGoJhoHUpgNAA5xTi3zGOVX5TtQeOTL4ROKjrQJPHFv9fzENk-qwN-9513hV4vBunl0Iznp_U9L_XcdDclKJ4s2NzJlhslkz4HHfzNHtekzBEtV15w_XuDm8"/>
+</button>
+<button class="shrink-0 w-24 h-24 rounded-lg border-2 border-transparent hover:border-outline-variant overflow-hidden" onclick="changeImage(this.src)">
+<img class="w-full h-full object-cover" data-alt="Mockup of various brand stationery including business cards and letterheads with a minimalist logo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSlRjQtsjhRiht9PjORW1XjiT5VS2-ze0lxnUmebs08COmcTuTUYu_3YYOYy_hBScFM_2U3E8I-OQdaIw_z7FVI8i3tt_at22uKhKINM7zpNUchcTsXVOs0PWVRZeMr2TP8ggd3RWsoF9ughXx4H0Qz2FUIeORIgk939KrRPKKS4R3YnojAv-qiwTupj57-i5sFnFEPamVNDULC4PT3Mz5Z2UZMfImcMT3HhwijQtt9xYJ_wNYQfiS-fOHxTPkMbFHaMFNFoS8SgA"/>
+</button>
+<button class="shrink-0 w-24 h-24 rounded-lg border-2 border-transparent hover:border-outline-variant overflow-hidden" onclick="changeImage(this.src)">
+<img class="w-full h-full object-cover" data-alt="High-end packaging design for a luxury product featuring metallic emerald green foil accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtqdHY1th_5xV2fKn3yqOk2DGS5k5Sojo8hiZvaCHqxcE9jEThWi8_kGzg_QXuwN6S80aZP84ntvnFSVgvDAGFiwwWpIScpbW_fh6VQHTNaYcjtQsOyTsOCOmuuuiEo8ApcLp5j7WOUji9Bykion7UVHCAM2crqd0piQGLJ0Yvana7T-fqgT_zUK0KD1ZK7Jc5O5f4US7lUZIcGdt1MSs2jtas_e68bnYs9K-e-tQMWliYpd45DL7yq4mr-Vg_whCrxFb40g1L76U"/>
+</button>
+</div>
+</div>
+<!-- Service Description -->
+<div class="bg-white rounded-xl shadow-sm p-stack-lg border border-surface-container">
+<h2 class="font-headline-md text-headline-md text-emerald-deep mb-stack-md">Descrição do Projeto</h2>
+<p class="text-on-surface-variant font-body-md mb-stack-lg leading-relaxed">
+                        Transforme a identidade visual da sua empresa com nosso serviço de Branding Sob Medida. Este pacote premium inclui a criação de logotipos exclusivos, paleta de cores institucional, tipografia selecionada e um manual de marca completo para garantir consistência em todos os pontos de contato. 
+                        Ideal para empresas que buscam se posicionar como líderes em seus nichos, com um visual que transmite confiança e sofisticação.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="flex gap-stack-md">
+<div class="w-12 h-12 rounded-full bg-emerald-deep/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-emerald-deep" data-icon="brush">brush</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-1">Design Exclusivo</h3>
+<p class="text-body-sm text-on-surface-variant">Cada traço é pensado para refletir a essência única do seu negócio.</p>
+</div>
+</div>
+<div class="flex gap-stack-md">
+<div class="w-12 h-12 rounded-full bg-emerald-deep/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-emerald-deep" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-1">Manual da Marca</h3>
+<p class="text-body-sm text-on-surface-variant">Guia técnico para aplicação correta em mídias digitais e impressas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Configuration & Purchase -->
+<div class="lg:col-span-5">
+<div class="sticky top-24 space-y-gutter">
+<!-- Pricing Card -->
+<div class="bg-white rounded-xl shadow-lg p-stack-lg border-2 border-surface-container-high">
+<div class="mb-stack-lg">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md px-3 py-1 rounded-full mb-2 inline-block">Serviço Premium</span>
+<h1 class="font-display-lg text-[32px] font-bold text-emerald-deep mb-1">Branding Sob Medida</h1>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-md font-bold text-emerald-deep">R$ 2.450,00</span>
+<span class="text-on-surface-variant font-body-sm line-through">R$ 3.200,00</span>
+</div>
+</div>
+<!-- Customization Form -->
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-stack-sm">Detalhes do Pedido</label>
+<textarea class="w-full border-outline-variant rounded-lg p-stack-md focus:ring-emerald-deep focus:border-emerald-deep min-h-[120px] transition-all" placeholder="Descreva brevemente sua visão ou requisitos específicos para o projeto..."></textarea>
+</div>
+<!-- Image Upload Zone -->
+<div>
+<label class="block font-label-md text-on-surface-variant mb-stack-sm">Upload de Referências (Opcional)</label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-stack-lg bg-surface-gray text-center cursor-pointer hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-[48px] text-outline group-hover:text-emerald-deep mb-2" data-icon="cloud_upload">cloud_upload</span>
+<p class="font-body-md text-on-surface-variant">Arraste ou clique para enviar arquivos</p>
+<p class="text-body-sm text-outline">JPG, PNG ou PDF (Max 10MB)</p>
+<input class="hidden" multiple="" type="file"/>
+</div>
+</div>
+<!-- Options -->
+<div class="grid grid-cols-2 gap-stack-md">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-stack-sm">Prazo de Entrega</label>
+<select class="w-full border-outline-variant rounded-lg p-3 bg-white focus:ring-emerald-deep">
+<option>Padrão (15 dias)</option>
+<option>Expresso (7 dias) +R$ 400</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-stack-sm">Revisões</label>
+<select class="w-full border-outline-variant rounded-lg p-3 bg-white focus:ring-emerald-deep">
+<option>3 Rodadas</option>
+<option>Ilimitadas +R$ 600</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Business Rules -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md mb-stack-lg flex gap-stack-md">
+<span class="material-symbols-outlined text-status-pending" data-icon="info">info</span>
+<div class="text-body-sm text-on-surface-variant">
+<span class="font-bold block text-on-surface">Regra de Negócio:</span>
+                                Pagamento integral ou sinal de 50% deve ser realizado **presencialmente** em nosso estúdio após a reunião de briefing.
+                            </div>
+</div>
+<!-- Action Button -->
+<div class="space-y-stack-md">
+<!-- Tooltip/Warning if profile is incomplete -->
+<div class="flex items-center gap-2 text-error font-label-md animate-pulse" id="profileWarning">
+<span class="material-symbols-outlined text-[18px]">error</span>
+                                Complete seu perfil para habilitar a compra
+                            </div>
+<button class="w-full bg-emerald-deep text-white font-headline-sm py-4 rounded-xl shadow-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary-container transition-all active:scale-[0.98]" disabled="" id="addToCartBtn">
+                                Adicionar ao Carrinho
+                            </button>
+<p class="text-center text-body-sm text-outline">
+                                Garantia de Satisfação ZD Design
+                            </p>
+</div>
+</div>
+<!-- FAQ Sidebar -->
+<div class="bg-surface-container-low rounded-xl p-stack-md">
+<h4 class="font-headline-sm text-emerald-deep mb-stack-md">Dúvidas Frequentes</h4>
+<ul class="space-y-stack-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] mt-1 text-emerald-deep">help</span>
+                                Como funciona o briefing? Realizamos uma call de 30min para alinhar expectativas.
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] mt-1 text-emerald-deep">help</span>
+                                Recebo os arquivos editáveis? Sim, entregamos em AI, EPS, PDF e PNG.
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-low dark:bg-on-background border-t border-outline-variant dark:border-outline">
+<div class="w-full py-stack-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-emerald-deep">ZD Design</span>
+<p class="mt-stack-md font-body-sm text-body-sm text-on-surface-variant">Premium boutique branding and high-performance design solutions for businesses that value excellence.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-md text-emerald-deep font-bold mb-2">Empresa</span>
+<a class="text-on-surface-variant hover:text-emerald-deep transition-colors font-body-sm text-body-sm" href="#">About</a>
+<a class="text-on-surface-variant hover:text-emerald-deep transition-colors font-body-sm text-body-sm" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-md text-emerald-deep font-bold mb-2">Suporte</span>
+<a class="text-on-surface-variant hover:text-emerald-deep transition-colors font-body-sm text-body-sm" href="#">FAQ</a>
+<a class="text-on-surface-variant hover:text-emerald-deep transition-colors font-body-sm text-body-sm" href="#">Help Center</a>
+<a class="text-on-surface-variant hover:text-emerald-deep transition-colors font-body-sm text-body-sm" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-md text-emerald-deep font-bold mb-2">Newsletter</span>
+<div class="flex gap-2">
+<input class="bg-white border border-outline-variant rounded-lg px-3 py-2 text-body-sm w-full" placeholder="Email" type="email"/>
+<button class="bg-emerald-deep text-white px-4 py-2 rounded-lg font-label-md">Join</button>
+</div>
+</div>
+</div>
+<div class="w-full py-stack-md border-t border-outline-variant/30 text-center font-body-sm text-body-sm text-outline">
+            © 2024 ZD Design. All rights reserved.
+        </div>
+</footer>
+<script>
+        function changeImage(src) {
+            const mainImg = document.getElementById('mainImage');
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+            }, 200);
+            
+            // Update selection border
+            const thumbs = document.querySelectorAll('.shrink-0.w-24');
+            thumbs.forEach(thumb => {
+                thumb.classList.remove('border-emerald-deep');
+                thumb.classList.add('border-transparent');
+                if(thumb.querySelector('img').src === src) {
+                    thumb.classList.add('border-emerald-deep');
+                }
+            });
+        }
+
+        // Simulating profile completion toggle for UI demo
+        setTimeout(() => {
+            const btn = document.getElementById('addToCartBtn');
+            const warning = document.getElementById('profileWarning');
+            // Mock logic: after 3 seconds, "simulate" profile completion
+            // btn.disabled = false;
+            // warning.style.display = 'none';
+        }, 5000);
+
+        // Upload zone micro-interaction
+        const uploadZone = document.querySelector('.border-dashed');
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('bg-emerald-deep/5', 'border-emerald-deep');
+        });
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('bg-emerald-deep/5', 'border-emerald-deep');
+        });
+        uploadZone.addEventListener('click', () => {
+            uploadZone.querySelector('input').click();
+        });
+    </script>
+</body></html>

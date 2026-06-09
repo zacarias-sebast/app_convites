@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "tertiary-fixed": "#6ffbbe",
+                    "on-tertiary-fixed": "#002113",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f8f9ff",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#cbdbf5",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container": "#e5eeff",
+                    "secondary": "#565e74",
+                    "on-tertiary-container": "#31c98f",
+                    "secondary-container": "#dae2fd",
+                    "primary": "#003527",
+                    "on-primary-container": "#80bea6",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-surface-variant": "#404944",
+                    "on-tertiary": "#ffffff",
+                    "status-pending": "#F59E0B",
+                    "surface-container-high": "#dce9ff",
+                    "surface-gray": "#F8FAFC",
+                    "on-surface": "#0b1c30",
+                    "outline-variant": "#bfc9c3",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "outline": "#707974",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-surface": "#213145",
+                    "tertiary-container": "#004f34",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dae2fd",
+                    "on-secondary-container": "#5c647a",
+                    "primary-container": "#064e3b",
+                    "surface-variant": "#d3e4fe",
+                    "emerald-deep": "#064E3B",
+                    "inverse-primary": "#95d3ba",
+                    "tertiary": "#003623",
+                    "surface": "#f8f9ff",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-primary-fixed": "#002117",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#2b6954",
+                    "on-background": "#0b1c30",
+                    "slate-900": "#0F172A",
+                    "primary-fixed": "#b0f0d6",
+                    "status-success": "#10B981",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "32px",
+                    "base": "4px",
+                    "container-max": "1280px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F8FAFC;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .chart-bar {
+            transition: height 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto bg-surface shadow-sm">
+<div class="flex items-center gap-gutter">
+<span class="font-display-lg text-display-lg font-bold text-emerald-deep">ZD Design</span>
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="text-secondary hover:text-emerald-deep transition-colors font-body-md text-body-md" href="#">Products</a>
+<a class="text-secondary hover:text-emerald-deep transition-colors font-body-md text-body-md" href="#">Services</a>
+<a class="text-secondary hover:text-emerald-deep transition-colors font-body-md text-body-md" href="#">Tracking</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="material-symbols-outlined text-secondary p-2 hover:bg-surface-container rounded-full transition-colors" data-icon="person">person</button>
+<button class="material-symbols-outlined text-secondary p-2 hover:bg-surface-container rounded-full transition-colors" data-icon="shopping_cart">shopping_cart</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User Profile" data-alt="A professional studio headshot of a creative professional woman in her 30s. She is smiling warmly against a soft-focus minimalist interior background with natural morning light. The overall aesthetic is clean, premium, and trustworthy, matching the modern minimalism of a high-end boutique design system. The lighting is high-key and flattering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDruEHGnYIYYXc4VDVvUnOio35knsOMKqiK0WqUkl1ROta_9v2C8H5TsSlgr6MQfsbZNxWBrSSF-ROBbHfy95hAQHEB2WDhaSCJM8LGsRPwcsHZXBZfpQDtmHD3zeFADhK7bQPR9EmW2pe8eJygPlnhdJ14HGHPBVGh9re-jPDt1AWlQPJpDwQ0pKpRGDQUgGO_6smuoGgHQNBwMI5BL7ECWB6fazMtaCdszxuoYQO5ha5DxqCGhLbW9r7V4j1DyZBLn0k9XyiJDOI"/>
+</div>
+</div>
+</nav>
+<!-- Sidebar (Desktop) -->
+<aside class="hidden lg:flex fixed left-0 top-20 flex-col h-[calc(100vh-80px)] py-stack-md bg-surface border-r border-outline-variant w-80">
+<div class="px-6 py-4">
+<h2 class="font-headline-md text-headline-md text-emerald-deep">Painel de Cliente</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bem-vindo de volta, Ana</p>
+</div>
+<nav class="flex-1 space-y-1 mt-4">
+<a class="bg-secondary-container text-on-secondary-container rounded-xl mx-2 px-4 py-3 flex items-center gap-3 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span> Home
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 px-4 py-3 rounded-xl flex items-center gap-3 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">inventory_2</span> Encomendas
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 px-4 py-3 rounded-xl flex items-center gap-3 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">edit_note</span> Custom Projects
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 px-4 py-3 rounded-xl flex items-center gap-3 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">payments</span> Pagamentos
+            </a>
+</nav>
+<div class="p-4 mt-auto border-t border-outline-variant">
+<button class="w-full bg-emerald-deep text-white py-3 rounded-xl font-headline-sm text-headline-sm hover:shadow-lg transition-shadow">
+                Start Custom Project
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="pt-24 pb-12 px-margin-mobile lg:ml-80 lg:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header & Profile Status -->
+<header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<h1 class="font-display-lg text-display-lg text-primary">Olá, Ana Silva</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Sua conta está ativa e em dia.</p>
+</div>
+<div class="w-full md:w-80 bg-white p-4 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Perfil Completo</span>
+<span class="font-label-md text-label-md text-emerald-deep">85%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-emerald-deep w-[85%] rounded-full"></div>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-error-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">info</span>
+                    Complete o NIF para compras.
+                </p>
+</div>
+</header>
+<!-- Bento Grid Dashboard -->
+<div class="bento-grid">
+<!-- Purchase History Graph -->
+<section class="col-span-12 lg:col-span-8 bg-white p-6 rounded-xl shadow-sm border border-outline-variant">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-sm text-headline-sm text-primary">Histórico de Compras (Anual)</h3>
+<select class="border-outline-variant rounded-lg font-body-sm text-body-sm px-3 py-1 bg-surface">
+<option>2024</option>
+<option>2023</option>
+</select>
+</div>
+<div class="h-64 flex items-end justify-between gap-2 px-2">
+<!-- Simple Bar Chart Visualization -->
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="bg-surface-container-highest w-full rounded-t-lg chart-bar" style="height: 40%"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">Jan</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="bg-surface-container-highest w-full rounded-t-lg chart-bar" style="height: 65%"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">Fev</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="bg-emerald-deep w-full rounded-t-lg chart-bar" style="height: 85%"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">Mar</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="bg-surface-container-highest w-full rounded-t-lg chart-bar" style="height: 55%"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">Abr</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="bg-surface-container-highest w-full rounded-t-lg chart-bar" style="height: 30%"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">Mai</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="bg-emerald-deep w-full rounded-t-lg chart-bar" style="height: 95%"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">Jun</span>
+</div>
+</div>
+</section>
+<!-- Quick Stats -->
+<section class="col-span-12 lg:col-span-4 grid grid-cols-1 gap-gutter">
+<div class="bg-emerald-deep text-white p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<span class="font-label-md text-label-md opacity-80 uppercase">Total Gasto</span>
+<h4 class="font-display-lg text-[32px] font-bold">€ 4.520,00</h4>
+<span class="font-body-sm text-body-sm text-on-primary-container">+12% desde o último mês</span>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant flex flex-col justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Projectos em Curso</span>
+<h4 class="font-display-lg text-[32px] font-bold text-primary">03</h4>
+<a class="text-emerald-deep font-label-md text-label-md hover:underline" href="#">Ver detalhes →</a>
+</div>
+</section>
+<!-- Recent Orders / Tracking -->
+<section class="col-span-12 bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-primary">Encomendas Recentes</h3>
+<button class="text-emerald-deep font-label-md text-label-md hover:bg-surface-container px-4 py-2 rounded-lg transition-colors">Ver Todas</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">ID DA ENCOMENDA</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">PRODUTO</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">DATA</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">STATUS</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant text-right">AÇÕES</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-4 font-body-sm text-body-sm font-bold text-primary">#ZD-9482</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container overflow-hidden">
+<img alt="Produto" data-alt="A macro close-up of high-quality premium corporate branding materials, including a deep emerald green embossed business card and a minimalist matte stationery set. The focus is sharp on the texture of the paper, set against a bright, professional white background with soft, diffused shadows. The image conveys technical precision and high-end boutique quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuRgISX68dUpFBsh-dvcrHFt6_N24aAB5AlDEGBisX8vZE3tIcfu4cgtIIH40zMixsm-eYm9uYd-qeSOjQlrzea5FtkYkeafYD1MbPUqsl2wfVSrQpEbF0p3nRQbi9dBuAkg0hUP2XB8Srwa8CxcZ7xB-jGjP6kwfXUzrbeMPB8FqME2JYiipkarVb-x_8K_bJIWiJc7frK2VcZ5Sgwatc6LiQzz6sg0zD7_C_POvkVFuhZnlsJoFoWOJ6jo18o2Svrp7neS82OWk"/>
+</div>
+<span class="font-body-sm text-body-sm">Identidade Visual Premium</span>
+</div>
+</td>
+<td class="p-4 font-body-sm text-body-sm text-on-surface-variant">12 Jun, 2024</td>
+<td class="p-4">
+<span class="px-3 py-1 rounded-full bg-emerald-deep/10 text-status-success font-label-md text-label-md flex items-center w-fit gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Enviado
+                                    </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="material-symbols-outlined text-secondary hover:text-emerald-deep" title="Rastreamento">local_shipping</button>
+<button class="material-symbols-outlined text-secondary hover:text-emerald-deep" title="Ver Recibo">receipt_long</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-4 font-body-sm text-body-sm font-bold text-primary">#ZD-9451</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container overflow-hidden">
+<img alt="Produto" data-alt="Minimalist packaging design for a luxury product, featuring clean lines and a sophisticated emerald green and gold foil accent. The product is placed on a white marble surface under soft, high-key studio lighting, creating a premium and trustworthy feel. The background is simple and uncluttered, emphasizing modern minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtewcU4Zbx-Gs_t5u0SzS1ThvTtvZdbCCZCnskG-BhlHD0e97ViBunD4E2tb9EyY7tvEv56LPCvZKh5G7ndD1vqA8BPYafAVCxIdiGf6DAmHFs4NanAYcb-X16r8Hi42xpaBpStw9k-qVEOakF06ybC7LUcKbbFWbsNsNdESPRv7cFqt4YdG9OEOiHqcc-JY-U5tzO76y2p7XvNm51I1weNajlhcgcGdVjzvidgSlTkW7o6KxqZRsGejBxDoPaa10Uuo8bw7nVZsk"/>
+</div>
+<span class="font-body-sm text-body-sm">Packaging Customizado x500</span>
+</div>
+</td>
+<td class="p-4 font-body-sm text-body-sm text-on-surface-variant">08 Jun, 2024</td>
+<td class="p-4">
+<span class="px-3 py-1 rounded-full bg-amber-100 text-status-pending font-label-md text-label-md flex items-center w-fit gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending"></span> Em Produção
+                                    </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="material-symbols-outlined text-secondary hover:text-emerald-deep" title="Rastreamento">local_shipping</button>
+<button class="material-symbols-outlined text-secondary hover:text-emerald-deep" title="Ver Recibo">receipt_long</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto border-t border-outline-variant bg-surface-container-low py-stack-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-emerald-deep">ZD Design</span>
+<p class="mt-4 font-body-sm text-body-sm text-on-surface-variant">Soluções de design e branding premium para empresas de alto impacto.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-label-md text-label-md text-primary uppercase">Plataforma</h5>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Produtos</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Projectos Customizados</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Tracking</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-label-md text-label-md text-primary uppercase">Suporte</h5>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">FAQ</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Centro de Ajuda</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-emerald-deep transition-colors" href="#">Termos de Uso</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-label-md text-label-md text-primary uppercase">Newsletter</h5>
+<div class="flex gap-2">
+<input class="bg-white border-outline-variant rounded-lg text-body-sm flex-1" placeholder="Seu email" type="email"/>
+<button class="bg-emerald-deep text-white p-2 rounded-lg material-symbols-outlined">send</button>
+</div>
+<p class="mt-4 font-body-sm text-body-sm text-on-surface-variant">© 2024 ZD Design. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple interaction for bars
+        document.querySelectorAll('.chart-bar').forEach(bar => {
+            bar.addEventListener('mouseenter', () => {
+                bar.classList.add('opacity-80');
+            });
+            bar.addEventListener('mouseleave', () => {
+                bar.classList.remove('opacity-80');
+            });
+        });
+    </script>
+</body></html>

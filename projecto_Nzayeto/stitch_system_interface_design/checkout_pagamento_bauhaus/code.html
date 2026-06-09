@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - ZD DESIGN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#1a1a1a",
+                      "on-primary-container": "#1a1a1a",
+                      "secondary-container": "#ffdad6",
+                      "on-tertiary-fixed": "#1a1a1a",
+                      "background": "#f5f0e8",
+                      "surface-tint": "#1a1a1a",
+                      "tertiary-fixed-dim": "#a8c6ff",
+                      "on-secondary-fixed-variant": "#1a1a1a",
+                      "on-surface": "#1a1a1a",
+                      "tertiary": "#0055ff",
+                      "on-primary-fixed": "#1a1a1a",
+                      "primary-fixed-dim": "#e6b800",
+                      "tertiary-container": "#d6e3ff",
+                      "primary-container": "#ffcc00",
+                      "surface-variant": "#e8e3da",
+                      "surface-bright": "#faf7f2",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#d6d1c9",
+                      "primary": "#1a1a1a",
+                      "error": "#cc0000",
+                      "surface-container-low": "#f2ede5",
+                      "on-primary-fixed-variant": "#1a1a1a",
+                      "on-error": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#ffcc00",
+                      "on-tertiary-container": "#1a1a1a",
+                      "on-secondary": "#1a1a1a",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#ffb3ab",
+                      "on-secondary-container": "#1a1a1a",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#1a1a1a",
+                      "on-background": "#1a1a1a",
+                      "inverse-primary": "#f5f0e8",
+                      "on-surface-variant": "#4a4a4a",
+                      "on-tertiary-fixed-variant": "#1a1a1a",
+                      "secondary": "#e63b2e",
+                      "surface-container-highest": "#e2ddd4",
+                      "outline-variant": "#d0cbc3",
+                      "outline": "#1a1a1a",
+                      "secondary-fixed": "#ffdad6",
+                      "surface": "#f5f0e8",
+                      "surface-container-high": "#e8e3da",
+                      "surface-container": "#eee9e0",
+                      "inverse-on-surface": "#f5f0e8",
+                      "tertiary-fixed": "#d6e3ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "display": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["Space Grotesk"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neo-brutalist-card {
+            box-shadow: 6px 6px 0px 0px rgba(26,26,26,1);
+        }
+        .neo-brutalist-button:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px 0px rgba(26,26,26,1);
+        }
+        .iban-highlight {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 204, 0, 0.1) 10px, rgba(255, 204, 0, 0.1) 20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-primary font-body selection:bg-primary-container selection:text-primary min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 flex justify-between items-center px-6 py-4 bg-background border-b-4 border-primary shadow-[6px_6px_0px_0px_rgba(26,26,26,1)]">
+<div class="font-headline font-black text-3xl tracking-tighter text-primary">ZD DESIGN</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-headline uppercase font-black text-base text-primary hover:text-tertiary transition-colors" href="#">Produtos</a>
+<a class="font-headline uppercase font-black text-base text-primary hover:text-tertiary transition-colors" href="#">Serviços</a>
+<a class="font-headline uppercase font-black text-base text-primary hover:text-tertiary transition-colors" href="#">Rastreamento</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 hover:bg-primary-container transition-all active:translate-x-1 active:translate-y-1">shopping_cart</button>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 py-12 md:py-20">
+<h1 class="font-headline font-black text-5xl md:text-8xl uppercase mb-12 tracking-tighter">Finalizar<br/>Compra</h1>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- FORM SECTIONS -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Section 1: Detalhes de Envio -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-primary text-background font-black h-10 w-10 flex items-center justify-center text-xl">01</span>
+<h2 class="font-headline font-extrabold text-2xl uppercase tracking-tight">Detalhes de Envio</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-2">
+<label class="font-headline font-bold text-xs uppercase mb-2 block">Nome Completo</label>
+<input class="w-full border-b-4 border-primary bg-transparent py-4 px-2 focus:outline-none focus:bg-primary-container transition-colors placeholder:text-primary/30 uppercase font-bold" placeholder="EX: WALTER GROPIUS" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="font-headline font-bold text-xs uppercase mb-2 block">Morada de Entrega</label>
+<input class="w-full border-b-4 border-primary bg-transparent py-4 px-2 focus:outline-none focus:bg-primary-container transition-colors placeholder:text-primary/30 uppercase font-bold" placeholder="RUA DAS FORMAS GEOMÉTRICAS, 1919" type="text"/>
+</div>
+<div>
+<label class="font-headline font-bold text-xs uppercase mb-2 block">Código Postal</label>
+<input class="w-full border-b-4 border-primary bg-transparent py-4 px-2 focus:outline-none focus:bg-primary-container transition-colors placeholder:text-primary/30 uppercase font-bold" placeholder="1000-001" type="text"/>
+</div>
+<div>
+<label class="font-headline font-bold text-xs uppercase mb-2 block">Cidade</label>
+<input class="w-full border-b-4 border-primary bg-transparent py-4 px-2 focus:outline-none focus:bg-primary-container transition-colors placeholder:text-primary/30 uppercase font-bold" placeholder="LISBOA" type="text"/>
+</div>
+</div>
+</section>
+<!-- Section 2: Pagamento -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-primary text-background font-black h-10 w-10 flex items-center justify-center text-xl">02</span>
+<h2 class="font-headline font-extrabold text-2xl uppercase tracking-tight">Pagamento &amp; IBAN</h2>
+</div>
+<div class="neo-brutalist-card bg-primary-container border-4 border-primary p-8 mb-8 iban-highlight">
+<div class="flex justify-between items-start mb-4">
+<span class="font-headline font-black text-sm uppercase bg-primary text-background px-2 py-1">Transferência Bancária</span>
+<span class="material-symbols-outlined text-4xl" data-icon="account_balance">account_balance</span>
+</div>
+<p class="font-headline font-bold text-xs uppercase mb-1">Entidade Bancária ZD DESIGN</p>
+<p class="font-headline font-black text-2xl md:text-3xl break-all">PT50 0000 1234 5678 9012 3456 7</p>
+<div class="mt-4 flex gap-2">
+<button class="bg-primary text-background px-4 py-2 font-headline font-bold text-xs uppercase hover:bg-tertiary transition-colors flex items-center gap-2 neo-brutalist-button">
+<span class="material-symbols-outlined text-base" data-icon="content_copy">content_copy</span> Copiar IBAN
+                            </button>
+</div>
+</div>
+<div class="space-y-4">
+<label class="font-headline font-bold text-xs uppercase block">Método Alternativo</label>
+<div class="grid grid-cols-3 gap-4">
+<button class="border-4 border-primary p-4 flex flex-col items-center gap-2 hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-2xl" data-icon="credit_card">credit_card</span>
+<span class="font-headline font-bold text-[10px] uppercase">Cartão</span>
+</button>
+<button class="border-4 border-primary p-4 flex flex-col items-center gap-2 bg-primary text-background">
+<span class="material-symbols-outlined text-2xl" data-icon="account_balance">account_balance</span>
+<span class="font-headline font-bold text-[10px] uppercase">IBAN</span>
+</button>
+<button class="border-4 border-primary p-4 flex flex-col items-center gap-2 hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-2xl" data-icon="qr_code_2">qr_code_2</span>
+<span class="font-headline font-bold text-[10px] uppercase">MB WAY</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 3: Comprovativo -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-primary text-background font-black h-10 w-10 flex items-center justify-center text-xl">03</span>
+<h2 class="font-headline font-extrabold text-2xl uppercase tracking-tight">Comprovativo</h2>
+</div>
+<div class="border-4 border-dashed border-primary p-12 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-6xl mb-4 group-hover:scale-110 transition-transform" data-icon="upload_file">upload_file</span>
+<p class="font-headline font-black text-lg uppercase">Arraste o ficheiro ou clique aqui</p>
+<p class="font-body text-sm mt-2 opacity-60">PDF, JPG ou PNG (Máx 5MB)</p>
+<input class="hidden" type="file"/>
+</div>
+</section>
+</div>
+<!-- SUMMARY COLUMN -->
+<div class="lg:col-span-5">
+<div class="sticky top-28 space-y-8">
+<div class="neo-brutalist-card bg-surface border-4 border-primary p-8">
+<h3 class="font-headline font-black text-3xl uppercase mb-8 border-b-4 border-primary pb-4">Resumo</h3>
+<div class="space-y-6 mb-8">
+<div class="flex gap-4">
+<div class="w-20 h-20 border-2 border-primary bg-surface-variant shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="A high-contrast architectural product photograph of a minimalist Bauhaus-inspired table lamp. The lamp features sharp geometric lines, a primary yellow base, and a matte black finish. It is set against a clean off-white background with harsh, direct lighting that creates strong, solid black shadows, perfectly capturing the neo-brutalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARO5qIuKujeGANF41Qgg2w-AZt5Pz9AcGd2UcRGdYAb-4r-3xsW2_2I-T0DvfgE5F0RPevLsDf8BH75aHX_LC_-AxcllkIMFvjsx7wgkQz1Tegv7S_PgzdcgA1vdC-bw6FVXaEm5qSvpFqGO6H3ch6cIdx_KYxFv9YE2GxZNIAPRpWdk6ehuXX1GjVuoJv0Rl2M5wmBjv6o31TipBSJgT_2iaD-8B4uugwMemK82RkJT2C1dMMmeixX4OcxN8LsKQqw6NiNaLDdH8"/>
+</div>
+<div class="flex-grow">
+<h4 class="font-headline font-bold text-sm uppercase">CADEIRA BAUHAUS B3</h4>
+<p class="text-xs opacity-60">QTY: 01 — PRETO MATE</p>
+<p class="font-headline font-black text-lg">€ 450.00</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-20 h-20 border-2 border-primary bg-surface-variant shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="A minimalist poster art piece with bold geometric patterns in red, yellow, and blue on a textured beige paper background. The composition is asymmetrical and uses thick black outlines, reflecting a modern Bauhaus graphic design style. The lighting is flat and even, emphasizing the solid blocks of color and the raw, unrefined texture of the paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzICCCOiCNQpJfeTIY8_qO4nJ390tC1tOfQ9djuVw67PXApbTxtAIjGXiKSflGmxJps715Lzrb5kb2S8ne_mxS9YmtyM_OL_xBjMvPUMOGqXVQbJMkdW7m3OIDkttmJ4zDyzkvfAyimC-h3_gKa7LN3bBiyC-zyqPBf1KU9x_AARagpGbw9yNGZbjlfTiEg94ViqDuN1aOPbJE0OM3eH0Dt5MteDTEfruCXKqxi_t3V8m9njuXB4Z2rKm2lTxpBZbhe82XUZR2G4w"/>
+</div>
+<div class="flex-grow">
+<h4 class="font-headline font-bold text-sm uppercase">POSTER "FORM FOLLOWS"</h4>
+<p class="text-xs opacity-60">QTY: 02 — A2 PRINT</p>
+<p class="font-headline font-black text-lg">€ 80.00</p>
+</div>
+</div>
+</div>
+<div class="space-y-2 font-headline font-bold text-sm uppercase border-t-4 border-primary pt-6">
+<div class="flex justify-between">
+<span>Subtotal</span>
+<span>€ 530.00</span>
+</div>
+<div class="flex justify-between">
+<span>Envio</span>
+<span>€ 15.00</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span>Desconto (BHS20)</span>
+<span>- € 20.00</span>
+</div>
+<div class="flex justify-between text-2xl font-black mt-4 bg-primary text-background p-2">
+<span>Total</span>
+<span>€ 525.00</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-secondary text-background border-4 border-primary py-6 px-8 font-headline font-black text-2xl uppercase tracking-tighter neo-brutalist-card neo-brutalist-button flex items-center justify-between group transition-all">
+<span>Concluir Encomenda</span>
+<span class="material-symbols-outlined text-4xl group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="text-[10px] font-bold uppercase opacity-60 text-center px-4">
+                        Ao concluir, aceitas os nossos termos de serviço e a política de privacidade Bauhaus. Os dados bancários são processados de forma segura.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto py-12 px-6 flex flex-col md:flex-row justify-between items-start gap-8 bg-primary border-t-4 border-primary">
+<div class="flex flex-col gap-4">
+<div class="font-headline font-black text-xl text-primary-fixed">ZD DESIGN</div>
+<p class="font-body text-sm font-bold uppercase text-background">© 2024 ZD DESIGN. FORM FOLLOWS FUNCTION.</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-body text-sm font-bold uppercase text-background hover:text-secondary-fixed transition-colors" href="#">Sobre Nós</a>
+<a class="font-body text-sm font-bold uppercase text-background hover:text-secondary-fixed transition-colors" href="#">Privacidade</a>
+<a class="font-body text-sm font-bold uppercase text-background hover:text-secondary-fixed transition-colors" href="#">Termos</a>
+<a class="font-body text-sm font-bold uppercase text-background hover:text-secondary-fixed transition-colors" href="#">Contato</a>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for the upload area
+        const dropZone = document.querySelector('.border-dashed');
+        const fileInput = document.querySelector('input[type="file"]');
+
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('bg-primary-container');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('bg-primary-container');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('bg-primary-container');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                alert('Ficheiro "' + files[0].name + '" detetado. Pronto para processamento.');
+            }
+        });
+
+        // Copy IBAN functionality
+        const copyBtn = document.querySelector('button.neo-brutalist-button:has([data-icon="content_copy"])');
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText('PT50000012345678901234567').then(() => {
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<span class="material-symbols-outlined text-base" style="font-variation-settings: \'FILL\' 1;">check_circle</span> Copiado!';
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalText;
+                }, 2000);
+            });
+        });
+    </script>
+</body></html>
